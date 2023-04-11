@@ -25,13 +25,13 @@ export default {
   name: "ProductList",
   props: ["cart", "products", "sortedProducts"],
   methods: {
- addToCart(products) {
-      this.$emit("addProduct", products);      //this method emits an event called "addProduct" with the products parameter. This event is then listened to by the parent component, which can then update the cart accordingly.
-    },
+
      canAddToCart(products) {
       return this.$parent.canAddToCart(products); //This method calls the canAddToCart method of the parent component, which checks if the product is already in the cart and if there is enough inventory to add the product.
     },
-    
+     addToCart(products) {
+      this.$emit("addProduct", products);      //this method emits an event called "addProduct" with the products parameter. This event is then listened to by the parent component, which can then update the cart accordingly.
+    },
    
   },
 };
