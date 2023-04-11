@@ -1,4 +1,6 @@
 <template>
+
+
 <div>
    <div v-for="products in sortedProducts()" :key="products.id">
 
