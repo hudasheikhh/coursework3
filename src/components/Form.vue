@@ -41,13 +41,13 @@ export default {
   name: "checkout",  //name of the component
   props: ["cart","showCart", "products", "order"],  //props is array of strings representing the properties that the component expects to receive from its parent component.
   methods: {
-
+ removeClass(products) {          
+      this.$emit("removeClass", products);          //This emits an event called "removeClass" to the parent component with the products parameter
+    },
     submitForm() {
       this.$emit("submitForm");    //This emits an event called "submitForm" to the parent component.
     },
-    removeClass(products) {          
-      this.$emit("removeClass", products);          //This emits an event called "removeClass" to the parent component with the products parameter
-    },
+   
     // showCart() {
     //   return this.$parent.showCart();
     // },
