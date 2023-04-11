@@ -51,6 +51,8 @@
                        <div v-for="(products, index) in ProductList" :key="index">
                 
 
+                   
+
                     <fieldset>
                         <!-- products information -->
                         <img v-bind:src="products.img" alt="" height="200px" width="200px">
